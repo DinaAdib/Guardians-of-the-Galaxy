@@ -443,7 +443,7 @@ glm::mat4 determineRotation(ObjectModel* Object)
     glm::mat4 XYZRotation;
     if (Object->getType() == EndOfGame)
     {
-        XYZRotation = eulerAngleY(orientation) * eulerAngleZ(orientation);
+        XYZRotation = eulerAngleY(orientation*0.5);
     }
     else if (Object->getType() == Tunnel)
     {
