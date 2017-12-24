@@ -86,11 +86,9 @@ int main(void)
         switch(GameState)
         {
         case MENU:
-            //Draw SkySphere
             showMenu(SpaceGhost,vertexUVID);
-
-           // system("aplay Startgame.wav");
-            //PlaySound(TEXT("Startgame.wav"), NULL, SND_ASYNC);
+           // system("aplay Startgame.wav"); //Playing sound on ubuntu
+            //PlaySound(TEXT("Startgame.wav"), NULL, SND_ASYNC);  //Playing sound on windows
             break;
         case GAMESTARTED:
            // system("aplay Startgame.wav");
@@ -214,7 +212,7 @@ bool initialize()
         ObjectBuffers[j].Create();
     }
 
-
+    //initialise game fonts
     initText2D( "LCDish.tga", "LogoFont.tga");
 
     return true;
@@ -577,7 +575,7 @@ void play(Spaceship &SpaceGhost, GLuint &vertexUVID)
         Won = false;
         GameState = GAMEENDED;
     }
-    if (getSSPosition().z < -500 && !inTunnel)
+    if (getSSPosition().z < -500 && !inTunnel)  //Passed finishline
     {
         cout << "You Passed the end line" << endl;
         Won = false;
