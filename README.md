@@ -3,6 +3,7 @@
 Our game is based in space where there’s a spaceship that has two missions to accomplish. 
 
 Game Controls:
+--------------
 The player uses up, down, right and left arrows to move in up, down, right and left directions respectively. And the spacebar to move forward.
 As the player presses the spacebar longer, the spaceship accelerates till it reaches a maximum velocity.
 If he releases his press, the spaceship decelerates till it reaches zero unless he presses spacebar again, then it will accelerate again.
